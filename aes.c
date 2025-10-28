@@ -95,11 +95,16 @@ void mixColumn(unsigned char s[4][4])
 int main()
 {
     unsigned char s[4][4] = {
+        {23, 56, 118, 221},
+        {67, 10, 1, 198},
+        {45, 34, 1, 198},
+        {89, 92, 1, 198}};
+
+    unsigned char key[4][4] = {
         {23, 67, 45, 89},
         {67, 10, 1, 198},
         {45, 34, 1, 198},
         {9, 92, 1, 198}};
-
     mixColumn(s);
 
     for (int i = 0; i < 4; i++)
@@ -110,6 +115,6 @@ int main()
         }
         printf("\n");
     }
-
+    printf("%d", subByte(0x52));
     return 0;
 }

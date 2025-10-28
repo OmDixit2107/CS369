@@ -11,12 +11,6 @@ poly_t poly_multiply(poly_t a, poly_t b);
 poly_t poly_inverse(poly_t g, poly_t m);
 poly_t binary_string_to_poly(const char *bin_str);
 
-/**
- * @brief Converts a binary string representation of a polynomial
- * into an integer.
- * @param bin_str A string containing '1's and '0's.
- * @return The polynomial represented as an integer.
- */
 poly_t binary_string_to_poly(const char *bin_str)
 {
     poly_t result = 0;
@@ -39,11 +33,6 @@ poly_t binary_string_to_poly(const char *bin_str)
     return result;
 }
 
-/**
- * @brief Gets the degree of a polynomial using safe bit-manipulation.
- * @param poly The polynomial represented as an integer.
- * @return The degree (position of the most significant bit).
- */
 int degree(poly_t poly)
 {
     int d = 0;
@@ -96,12 +85,6 @@ void print_poly(poly_t poly)
     }
 }
 
-/**
- * @brief Multiplies two polynomials over GF(2).
- * @param a The first polynomial.
- * @param b The second polynomial.
- * @return The resulting polynomial product.
- */
 poly_t poly_multiply(poly_t a, poly_t b)
 {
     poly_t result = 0;
@@ -162,19 +145,14 @@ poly_t poly_inverse(poly_t g, poly_t m)
 
 int main()
 {
-    // ===================================================================
-    // === EDIT THE POLYNOMIALS HERE ===
-    // ===================================================================
 
     // m(x) is the irreducible polynomial for the field.
     // For AES, this is x^8 + x^4 + x^3 + x + 1.
-    const char *m_str = "000110111";
+    const char *m_str = "100011011";
 
     // g(x) is the polynomial you want to find the inverse of.
     // Example: x^7 + x^5 + x^4 + x^2 + 1
-    const char *g_str = "00001100";
-
-    // ===================================================================
+    const char *g_str = "10110001";
 
     // Convert the defined strings to polynomial integers
     poly_t m = binary_string_to_poly(m_str);

@@ -1,19 +1,5 @@
 #include <stdio.h>
 
-/**
- * @brief Implements the Extended Euclidean Algorithm to find integers x and y
- * such that ax + by = gcd(a, b).
- *
- * This function recursively calculates the GCD of 'a' and 'b' while also
- * determining the coefficients 'x' and 'y' from Bézout's identity.
- * The pointers x and y are used to return these coefficients back to the caller.
- *
- * @param a The first integer.
- * @param b The second integer.
- * @param x Pointer to an integer to store the coefficient of 'a'.
- * @param y Pointer to an integer to store the coefficient of 'b'.
- * @return The greatest common divisor of 'a' and 'b'.
- */
 int extendedEuclidean(int a, int b, int *x, int *y)
 {
     // Base case for the recursion
@@ -39,8 +25,8 @@ int extendedEuclidean(int a, int b, int *x, int *y)
 
 int main()
 {
-    int a = 23;
-    int b = 43;
+    int a = 7;
+    int b = 26;
     int x, y;
 
     int g = extendedEuclidean(a, b, &x, &y);
