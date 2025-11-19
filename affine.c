@@ -24,9 +24,9 @@ void affineEncrypt(char plaintext[], char ciphertext[], int a, int b)
 
 int main()
 {
-    int a = 5;
-    int b = 21;
-    char plaintext[] = "INDIA";
+    int a = 11;
+    int b = 16;
+    char plaintext[] = "MIDSEM";
 
     char ciphertext[strlen(plaintext) + 1];
 

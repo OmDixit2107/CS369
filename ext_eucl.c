@@ -25,8 +25,8 @@ int extendedEuclidean(int a, int b, int *x, int *y)
 
 int main()
 {
-    int a = 7;
-    int b = 26;
+    int a = 23;
+    int b = 43;
     int x, y;
 
     int g = extendedEuclidean(a, b, &x, &y);

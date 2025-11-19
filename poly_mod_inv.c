@@ -151,8 +151,7 @@ int main()
     const char *m_str = "100011011";
 
     // g(x) is the polynomial you want to find the inverse of.
-    // Example: x^7 + x^5 + x^4 + x^2 + 1
-    const char *g_str = "10110001";
+    const char *g_str = "00001100";
 
     // Convert the defined strings to polynomial integers
     poly_t m = binary_string_to_poly(m_str);
